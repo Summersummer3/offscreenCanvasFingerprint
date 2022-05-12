@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script src="../oscfp.js"></script>
+    </head>
+    <body>
+        hello world!!!
+        <div>
+            oscfp: <p class="fp">unknown</p>
+        </div>
+        <script>
+            window.osc.onmessage = (e) => {
+                const fp = document.querySelector('.fp')
+                fp.innerHTML = e.data.res
+            }
+        </script>
+    </body>
+</html>
